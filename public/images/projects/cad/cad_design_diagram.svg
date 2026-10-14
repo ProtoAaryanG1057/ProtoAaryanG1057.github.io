@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121519" />
+      <stop offset="100%" stop-color="#0B0D10" />
+    </linearGradient>
+    <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#24272B" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad2)" />
+  <rect width="800" height="500" fill="url(#grid2)" />
+
+  <!-- Border & Target Marks -->
+  <rect x="20" y="20" width="760" height="460" fill="none" stroke="#24272B" stroke-width="1.5" />
+  <path d="M 15 35 L 15 15 L 35 15" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+  <path d="M 765 15 L 785 15 L 785 35" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+  <path d="M 15 465 L 15 485 L 35 485" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+  <path d="M 765 485 L 785 485 L 785 465" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+
+  <!-- Header -->
+  <text x="40" y="52" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#9EDCFF" letter-spacing="2">FIG. 03.1 — PARAMETRIC ENCLOSURE &amp; DFM TOPOLOGY</text>
+  <text x="40" y="70" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8" letter-spacing="1">UNIFORM WALL RIBBING / THREADED BRASS INSERTS / BEARING SEATS</text>
+  <text x="740" y="52" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#999FA8">REF: PRJ-03</text>
+
+  <!-- Isometric / Orthographic CAD Representation -->
+  <g transform="translate(190, 240)">
+    <!-- Base Shell Wireframe -->
+    <polygon points="-120,60 40,120 140,40 -20,-20" fill="#181B20" stroke="#B7B8B5" stroke-width="1.5" />
+    <polygon points="-120,60 -120,-10 -20,-90 -20,-20" fill="#121519" stroke="#999FA8" stroke-width="1.2" />
+    <polygon points="-20,-90 140,-30 140,40 -20,-20" fill="#1A1E24" stroke="#B7B8B5" stroke-width="1.5" />
+
+    <!-- Top Cutout / Recessed Bay -->
+    <polygon points="-10,-35 110,-5 80,20 -40,-10" fill="#0B0D10" stroke="#9EDCFF" stroke-width="1.5" />
+    
+    <!-- Ribbing Lines Inside -->
+    <line x1="-30" y1="-15" x2="90" y2="15" stroke="#9EDCFF" stroke-width="0.8" stroke-dasharray="3,3" />
+    <line x1="-20" y1="-20" x2="100" y2="10" stroke="#9EDCFF" stroke-width="0.8" stroke-dasharray="3,3" />
+
+    <!-- Heat-set Insert Pockets (4 Corners) -->
+    <circle cx="-15" cy="-28" r="4.5" fill="#24272B" stroke="#9EDCFF" stroke-width="1.2" />
+    <circle cx="95" cy="2" r="4.5" fill="#24272B" stroke="#9EDCFF" stroke-width="1.2" />
+    <circle cx="70" cy="22" r="4.5" fill="#24272B" stroke="#9EDCFF" stroke-width="1.2" />
+    <circle cx="-38" cy="-8" r="4.5" fill="#24272B" stroke="#9EDCFF" stroke-width="1.2" />
+
+    <!-- Bearing Bore Detail -->
+    <ellipse cx="60" cy="70" rx="28" ry="14" fill="#0B0D10" stroke="#9EDCFF" stroke-width="1.8" />
+    <ellipse cx="60" cy="70" rx="16" ry="8" fill="none" stroke="#B7B8B5" stroke-width="1" stroke-dasharray="2,2" />
+    <ellipse cx="60" cy="70" rx="6" ry="3" fill="#9EDCFF" stroke="none" />
+  </g>
+
+  <!-- Technical Dimensioning & Callouts -->
+  <g transform="translate(430, 140)">
+    <!-- Dimension Callout 1 -->
+    <path d="M -150 90 L -50 40 L 10 40" fill="none" stroke="#9EDCFF" stroke-width="1"/>
+    <circle cx="-150" cy="90" r="3" fill="#9EDCFF"/>
+    <text x="20" y="36" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#F2F0EA" letter-spacing="1">WALL THICKNESS: 2.80 MM</text>
+    <text x="20" y="50" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">Optimized for FDM layer bond &amp; uniform shrinkage</text>
+
+    <!-- Dimension Callout 2 -->
+    <path d="M -160 170 L -50 110 L 10 110" fill="none" stroke="#9EDCFF" stroke-width="1"/>
+    <circle cx="-160" cy="170" r="3" fill="#9EDCFF"/>
+    <text x="20" y="106" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#F2F0EA" letter-spacing="1">HEAT-SET INSERTS: M3 × 4MM</text>
+    <text x="20" y="120" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">Brass knurled inserts with 8° lead-in chamfer</text>
+
+    <!-- Dimension Callout 3 -->
+    <path d="M -180 230 L -50 180 L 10 180" fill="none" stroke="#9EDCFF" stroke-width="1"/>
+    <circle cx="-180" cy="230" r="3" fill="#9EDCFF"/>
+    <text x="20" y="176" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#F2F0EA" letter-spacing="1">BEARING BORE TOLERANCE: H7</text>
+    <text x="20" y="190" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">Flanged seat with internal snap-ring channel</text>
+
+    <!-- Callout 4: Fastener Matrix -->
+    <g transform="translate(10, 220)">
+      <rect x="0" y="0" width="310" height="90" fill="#121519" stroke="#24272B" stroke-width="1"/>
+      <text x="15" y="24" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#9EDCFF" letter-spacing="1">HARDWARE STANDARDIZATION MATRIX</text>
+      <text x="15" y="44" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#F2F0EA">FASTENERS: ISO 4762 M3×10 HEX SOCKET (A2-70)</text>
+      <text x="15" y="60" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">PULL-OUT RESISTANCE: 780 N NOMINAL</text>
+      <text x="15" y="76" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">TORQUE LIMIT: 1.2 N·m WITH THREAD LOCKER</text>
+    </g>
+  </g>
+
+  <!-- Technical Footer Stamp -->
+  <text x="40" y="460" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">DATUM: SYSTEM ORIGIN · UNITS: MM · MATERIAL: PETG / CARBON-FIBER INFUSED</text>
+</svg>

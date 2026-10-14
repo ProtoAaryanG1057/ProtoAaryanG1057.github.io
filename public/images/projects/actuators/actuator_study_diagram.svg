@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121519" />
+      <stop offset="100%" stop-color="#0B0D10" />
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B7B8B5" />
+      <stop offset="50%" stop-color="#6E737B" />
+      <stop offset="100%" stop-color="#24272B" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#24272B" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  <rect width="800" height="500" fill="url(#grid)" />
+
+  <!-- Technical Border & Corner Marks -->
+  <rect x="20" y="20" width="760" height="460" fill="none" stroke="#24272B" stroke-width="1.5" />
+  <path d="M 15 35 L 15 15 L 35 15" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+  <path d="M 765 15 L 785 15 L 785 35" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+  <path d="M 15 465 L 15 485 L 35 485" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+  <path d="M 765 485 L 785 485 L 785 465" fill="none" stroke="#9EDCFF" stroke-width="1.5" />
+
+  <!-- Header Annotations -->
+  <text x="40" y="52" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#9EDCFF" letter-spacing="2">FIG. 02.1 — ELECTROMECHANICAL ACTUATOR INTEGRATION</text>
+  <text x="40" y="70" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8" letter-spacing="1">TORQUE DENSITY / REDUCTION KINEMATICS &amp; CLOSED-LOOP PID</text>
+  <text x="740" y="52" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#999FA8">REF: PRJ-02</text>
+
+  <!-- Technical Schematic Graphics -->
+  <g transform="translate(180, 260)">
+    <!-- Motor Stator Outer Ring -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#24272B" stroke-width="3"/>
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#B7B8B5" stroke-width="1" stroke-dasharray="4,4"/>
+
+    <!-- Stator Coils -->
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#9EDCFF" stroke-width="1.5" stroke-dasharray="12,6"/>
+    
+    <!-- Rotor & Magnet Ring -->
+    <circle cx="0" cy="0" r="65" fill="#181B20" stroke="#B7B8B5" stroke-width="2"/>
+    
+    <!-- Sun Gear (Central) -->
+    <circle cx="0" cy="0" r="28" fill="#24272B" stroke="#9EDCFF" stroke-width="2"/>
+    <circle cx="0" cy="0" r="12" fill="#0B0D10" stroke="#9EDCFF" stroke-width="1.5"/>
+
+    <!-- Planetary Gears (3x) -->
+    <circle cx="0" cy="-45" r="16" fill="#181B20" stroke="#B7B8B5" stroke-width="1.5"/>
+    <circle cx="0" cy="-45" r="5" fill="#9EDCFF" stroke="none"/>
+
+    <circle cx="39" cy="22" r="16" fill="#181B20" stroke="#B7B8B5" stroke-width="1.5"/>
+    <circle cx="39" cy="22" r="5" fill="#9EDCFF" stroke="none"/>
+
+    <circle cx="-39" cy="22" r="16" fill="#181B20" stroke="#B7B8B5" stroke-width="1.5"/>
+    <circle cx="-39" cy="22" r="5" fill="#9EDCFF" stroke="none"/>
+
+    <!-- Carrier Pitch Circle -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#999FA8" stroke-width="0.8" stroke-dasharray="2,4"/>
+
+    <!-- Center Crosshairs -->
+    <line x1="-130" y1="0" x2="130" y2="0" stroke="#999FA8" stroke-width="0.75" stroke-dasharray="6,4"/>
+    <line x1="0" y1="-130" x2="0" y2="130" stroke="#999FA8" stroke-width="0.75" stroke-dasharray="6,4"/>
+  </g>
+
+  <!-- Side Dimensioning & Callouts -->
+  <g transform="translate(420, 150)">
+    <!-- Callout 1: Motor Rotor -->
+    <path d="M -130 50 L -40 20 L 20 20" fill="none" stroke="#9EDCFF" stroke-width="1"/>
+    <circle cx="-130" cy="50" r="3" fill="#9EDCFF"/>
+    <text x="30" y="16" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#F2F0EA" letter-spacing="1">ROTOR STAGE: 14-POLE</text>
+    <text x="30" y="30" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">Backlash &lt; 0.15 deg / Backdrivable</text>
+
+    <!-- Callout 2: Reduction Stage -->
+    <path d="M -200 110 L -40 80 L 20 80" fill="none" stroke="#9EDCFF" stroke-width="1"/>
+    <circle cx="-200" cy="110" r="3" fill="#9EDCFF"/>
+    <text x="30" y="76" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#F2F0EA" letter-spacing="1">GEAR RATIO: 6:1 PLANETARY</text>
+    <text x="30" y="90" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">Module 0.5 steel carrier assembly</text>
+
+    <!-- Callout 3: Magnetic Sensing -->
+    <path d="M -240 110 L -40 140 L 20 140" fill="none" stroke="#9EDCFF" stroke-width="1"/>
+    <circle cx="-240" cy="110" r="3" fill="#9EDCFF"/>
+    <text x="30" y="136" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#F2F0EA" letter-spacing="1">CLOSED-LOOP ENCODER</text>
+    <text x="30" y="150" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">12-bit magnetic absolute feedback</text>
+
+    <!-- Callout 4: PID telemetry curve -->
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="280" height="90" fill="#121519" stroke="#24272B" stroke-width="1"/>
+      <path d="M 10 75 Q 40 10, 80 40 T 150 35 T 260 35" fill="none" stroke="#9EDCFF" stroke-width="1.8"/>
+      <line x1="10" y1="35" x2="260" y2="35" stroke="#999FA8" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <text x="10" y="-8" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">STEP RESPONSE / IMPEDANCE DAMPING</text>
+      <text x="260" y="48" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="8" fill="#9EDCFF">SETTLING TIME &lt; 42 ms</text>
+    </g>
+  </g>
+
+  <!-- Technical Footer Stamp -->
+  <text x="40" y="460" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#999FA8">SCALE: 1:1 · TOLERANCE: ±0.05 MM · MATERIAL: 6061-T6 AL / STS ALLOY</text>
+</svg>
