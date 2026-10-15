@@ -14,10 +14,7 @@ export function Footer() {
         <div className="footer-left">
           <span className="footer-brand">{siteConfig.brand.title}</span>
           <p className="footer-copy">
-            © {siteConfig.contact.copyrightYear} {siteConfig.brand.name} · {siteConfig.contact.license}
-          </p>
-          <p className="mono-label" style={{ fontSize: '0.68rem', marginTop: '0.2rem' }}>
-            {siteConfig.hero.materialsLabel}
+            © {siteConfig.contact.copyrightYear} {siteConfig.brand.name}
           </p>
         </div>
 

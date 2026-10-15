@@ -132,7 +132,6 @@ export const siteConfig = {
   // Navigation Links
   navigation: [
     { label: "WORK", href: "#work" },
-    { label: "CAPABILITIES", href: "#capabilities" },
     { label: "ABOUT", href: "#about" },
     { label: "CONTACT", href: "#contact" }
   ]

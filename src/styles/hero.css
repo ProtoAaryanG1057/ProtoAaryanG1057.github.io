@@ -46,8 +46,8 @@
 }
 
 .hero-visible-photo {
-  width: clamp(225px, 22vw, 290px);
-  height: clamp(225px, 22vw, 290px);
+  width: clamp(260px, 24vw, 330px);
+  height: clamp(260px, 24vw, 330px);
   border-radius: 20px;
   object-fit: cover;
   border: 3.5px solid var(--color-ice-blue);

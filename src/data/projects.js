@@ -16,7 +16,7 @@ export const projects = [
     summary: "A humanoid bipedal robotics project exploring mechanical architecture, joint actuation, spur-gear transmissions, and kinematic simulation.",
     status: "PROTOTYPE TESTING & SIMULATION",
     timeline: "JUN 26 – AUG 26",
-    primaryImage: "./images/projects/flexwalk/Flexwalk_v2.jpg",
+    primaryImage: "./images/projects/flexwalk/Flexwalk.webp",
     secondaryImage: "./images/projects/flexwalk/Flexwalk_v1_assembly.jpg",
     simulationGif: "./images/projects/flexwalk/Flexwalk_v2_sim.gif",
     repoUrl: "https://github.com/Dhruva245/Flexwalk",

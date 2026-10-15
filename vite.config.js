@@ -7,7 +7,30 @@ export default defineConfig({
   base: './',
   server: {
     port: 3000,
-    host: true
+    host: true,
+    watch: {
+      ignored: [
+        '**/.cache/**',
+        '**/node_modules/.cache/**',
+        '**/esp/**',
+        '**/Wall-E/**',
+        '**/ros2_ws/**',
+        '**/meow_ws/**',
+        '**/Build_Systems_Example2/**',
+        '**/Flexwalk/**',
+        '**/AmazeDex/**',
+        '**/maro_ws/**',
+        '**/pixelate/**',
+        '**/Pixels*/**',
+        '**/Pictures/**',
+        '**/Videos/**',
+        '**/Music/**',
+        '**/Documents/**',
+        '**/Downloads/**',
+        '**/Desktop/**',
+        '**/dist/**',
+      ]
+    }
   },
   build: {
     outDir: 'dist',

@@ -173,42 +173,6 @@ export function Home({ onSelectProject }) {
 
       <hr className="section-divider" />
 
-      {/* 3. CAPABILITIES SECTION */}
-      <section id="capabilities" className="section-padding" aria-label="Engineering Capabilities">
-        <div className="container">
-          <div className="section-header">
-            <div className="section-eyebrow">
-              <span className="mono-label mono-accent">02 / DOMAINS</span>
-            </div>
-            <h2 className="section-title">TECHNICAL CAPABILITIES</h2>
-            <p className="section-description">
-              Practical competencies across mechanical design, robotic kinematics, embedded hardware, and computational simulation.
-            </p>
-          </div>
-
-          <div className="capabilities-grid">
-            {siteConfig.capabilities.map((cap) => (
-              <div key={cap.category} className="capability-card">
-                <div className="capability-card-header">
-                  <h3 className="capability-card-title">{cap.category}</h3>
-                  <span className="mono-label mono-accent">{cap.code}</span>
-                </div>
-                <p className="capability-card-desc">{cap.description}</p>
-                <ul className="capability-skills-list">
-                  {cap.skills.map((skill, idx) => (
-                    <li key={idx} className="capability-skill-item">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <hr className="section-divider" />
-
       {/* 4. ABOUT SECTION */}
       <section id="about" className="section-padding" aria-label="About Philosophy">
         <div className="container">
