@@ -61,7 +61,7 @@ function SculptureLoader() {
 /**
  * Camera & Controls Reset Controller
  */
-function SceneContent({ reducedMotion, impulseCount, controlsRef }) {
+function SceneContent({ reducedMotion, impulseCount }) {
   return (
     <>
       {/* Precision Studio Lighting */}
@@ -108,7 +108,6 @@ function SceneContent({ reducedMotion, impulseCount, controlsRef }) {
 
       {/* Interactive Orbit Drag Controls */}
       <OrbitControls
-        ref={controlsRef}
         enableZoom={false} // Crucial: preserves normal page scroll
         enablePan={false}
         rotateSpeed={0.8}
@@ -121,8 +120,7 @@ function SceneContent({ reducedMotion, impulseCount, controlsRef }) {
   );
 }
 
-export function HeroScene({ impulseCount, onCanvasClick, resetTrigger }) {
-  const controlsRef = useRef();
+export function HeroScene({ impulseCount, onCanvasClick }) {
   const [reducedMotion, setReducedMotion] = useState(false);
   const [isSupported, setIsSupported] = useState(true);
 
@@ -148,13 +146,6 @@ export function HeroScene({ impulseCount, onCanvasClick, resetTrigger }) {
       return () => mediaQuery.removeEventListener('change', handler);
     }
   }, []);
-
-  // Handle Reset View Trigger
-  useEffect(() => {
-    if (resetTrigger > 0 && controlsRef.current) {
-      controlsRef.current.reset();
-    }
-  }, [resetTrigger]);
 
   if (!isSupported) {
     return <WebGLFallback />;
@@ -183,7 +174,6 @@ export function HeroScene({ impulseCount, onCanvasClick, resetTrigger }) {
           <SceneContent
             reducedMotion={reducedMotion}
             impulseCount={impulseCount}
-            controlsRef={controlsRef}
           />
         </Canvas>
       </div>

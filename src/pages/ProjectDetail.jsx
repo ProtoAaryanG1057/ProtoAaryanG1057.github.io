@@ -45,7 +45,7 @@ export function ProjectDetail({ projectId, onSelectProject, onBackToHome }) {
       </div>
 
       {/* Brief Description of the Work with Thumbnail */}
-      <section className="detail-brief" style={{ marginBottom: '3rem', maxWidth: '1200px' }}>
+      <section className="detail-brief" style={{ marginBottom: '3rem', maxWidth: '100%' }}>
         <div
           className="detail-brief-header"
           style={{
@@ -58,7 +58,7 @@ export function ProjectDetail({ projectId, onSelectProject, onBackToHome }) {
           <div>
             <h1 className="detail-title">{project.title}</h1>
             <p className="detail-subtitle">{project.subtitle}</p>
-            <p className="detail-prose" style={{ marginTop: '1.5rem', fontSize: '1.25rem', lineHeight: '1.8' }}>
+            <p className="detail-prose" style={{ marginTop: '1.5rem', fontSize: '1.4rem', lineHeight: '1.85' }}>
               {project.sections.overview}
             </p>
           </div>

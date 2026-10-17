@@ -22,7 +22,7 @@ export const projects = [
     repoUrl: "https://github.com/Dhruva245/Flexwalk",
     videos: [
       {
-        title: "Closed-Loop Dynamic Stance & Balance Test",
+        title: "Hip Pitch & Roll Test During Assembly",
         src: "./videos/flexwalk/flex1.mp4"
       },
       {

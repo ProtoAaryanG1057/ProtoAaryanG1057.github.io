@@ -3,23 +3,12 @@ import { siteConfig } from '../data/siteConfig';
 import { projects } from '../data/projects';
 import { HeroScene } from '../components/HeroScene';
 import { ProjectCard } from '../components/ProjectCard';
-import { RotateCcw, Zap, ArrowDownRight, Mail, Github, ArrowRight } from 'lucide-react';
+import { Mail, Github } from 'lucide-react';
 
 export function Home({ onSelectProject }) {
   const [impulseCount, setImpulseCount] = useState(0);
-  const [resetTrigger, setResetTrigger] = useState(0);
 
   const handleSculptureClick = () => {
-    setImpulseCount((c) => c + 1);
-  };
-
-  const handleResetView = (e) => {
-    e.stopPropagation();
-    setResetTrigger((t) => t + 1);
-  };
-
-  const handleManualImpulse = (e) => {
-    e.stopPropagation();
     setImpulseCount((c) => c + 1);
   };
 
@@ -39,16 +28,16 @@ export function Home({ onSelectProject }) {
           {/* Left Hero Column */}
           <div className="hero-content">
             <div className="hero-eyebrow-container">
-              <div className="hero-eyebrow">
-                <span className="hero-eyebrow-line" aria-hidden="true" />
-                <span className="mono-label mono-accent">{siteConfig.hero.eyebrow}</span>
-              </div>
               <div className="hero-photo-frame">
                 <img
                   src="./images/myphoto.webp"
                   alt="Aaryan Gaikwad"
                   className="hero-visible-photo"
                 />
+              </div>
+              <div className="hero-eyebrow">
+                <span className="hero-eyebrow-line" aria-hidden="true" />
+                <span className="mono-label mono-accent">{siteConfig.hero.eyebrow}</span>
               </div>
             </div>
 
@@ -100,37 +89,11 @@ export function Home({ onSelectProject }) {
             <HeroScene
               impulseCount={impulseCount}
               onCanvasClick={handleSculptureClick}
-              resetTrigger={resetTrigger}
             />
 
             {/* Viewport Interaction Hint */}
             <div className="hero-interaction-hint">
-              <span>DRAG TO ROTATE · CLICK IMPULSE</span>
-            </div>
-
-            {/* Controls Overlay */}
-            <div className="hero-canvas-controls">
-              <button
-                type="button"
-                onClick={handleManualImpulse}
-                className="hero-control-btn"
-                title="Trigger dynamic rotational impulse"
-                aria-label="Trigger impulse"
-              >
-                <Zap size={13} color="var(--color-ice-blue)" aria-hidden="true" />
-                <span>IMPULSE</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={handleResetView}
-                className="hero-control-btn"
-                title="Reset camera and sculpture orientation"
-                aria-label="Reset viewport"
-              >
-                <RotateCcw size={13} color="var(--color-titanium)" aria-hidden="true" />
-                <span>RESET VIEW</span>
-              </button>
+              <span>DRAG TO ROTATE · TAP MODEL TO IMPULSE</span>
             </div>
           </div>
         </div>

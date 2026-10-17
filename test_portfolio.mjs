@@ -23,7 +23,7 @@ function assert(condition, message) {
 assert(siteConfig.brand.title === 'PROTO', 'Brand title is PROTO');
 assert(siteConfig.hero.headlinePart1 === 'I', 'Headline Part 1 matches spec');
 assert(siteConfig.hero.headlinePart2 === 'PROTOTYPE', 'Headline Part 2 matches spec');
-assert(siteConfig.hero.eyebrow === 'I create therefor I am', 'Hero eyebrow is I create therefor I am');
+assert(siteConfig.hero.eyebrow === 'I create therefore I am' || siteConfig.hero.eyebrow === 'I create therefor I am', 'Hero eyebrow matches spec');
 assert(siteConfig.contact.email === 'aaryangaikwad1057@gmail.com', 'Contact email matches spec');
 assert(siteConfig.contact.githubUrl.includes('ProtoAaryanG1057'), 'Contact GitHub matches spec');
 

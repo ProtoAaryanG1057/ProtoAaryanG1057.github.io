@@ -32,9 +32,9 @@
 .hero-eyebrow-container {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: clamp(1rem, 2vw, 1.75rem);
   margin-bottom: 2.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hero-photo-frame {
@@ -46,8 +46,8 @@
 }
 
 .hero-visible-photo {
-  width: clamp(260px, 24vw, 330px);
-  height: clamp(260px, 24vw, 330px);
+  width: clamp(240px, 22vw, 320px);
+  height: clamp(240px, 22vw, 320px);
   border-radius: 20px;
   object-fit: cover;
   border: 3.5px solid var(--color-ice-blue);
@@ -66,12 +66,20 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.hero-eyebrow .mono-label {
+  font-size: clamp(0.95rem, 1.25vw, 1.12rem);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .hero-eyebrow-line {
-  width: 20px;
-  height: 1px;
+  width: 24px;
+  height: 1.5px;
   background-color: var(--color-ice-blue);
+  flex-shrink: 0;
 }
 
 .hero-headline {
@@ -147,41 +155,7 @@
   cursor: grabbing;
 }
 
-/* 3D Scene Interactive Overlay Controls */
-.hero-canvas-controls {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  z-index: 10;
-  pointer-events: auto;
-}
-
-.hero-control-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  color: var(--color-titanium);
-  background-color: rgba(18, 21, 25, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--color-border);
-  padding: 0.45rem 0.85rem;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-}
-
-.hero-control-btn:hover {
-  border-color: var(--color-ice-blue);
-  color: var(--color-warm-white);
-  background-color: rgba(36, 39, 43, 0.9);
-}
-
+/* 3D Scene Interaction Hint */
 .hero-interaction-hint {
   position: absolute;
   top: 1.5rem;
@@ -246,11 +220,6 @@
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .hero-control-btn {
-    font-size: 0.68rem;
-    padding: 0.35rem 0.65rem;
   }
 
   .hero-interaction-hint {

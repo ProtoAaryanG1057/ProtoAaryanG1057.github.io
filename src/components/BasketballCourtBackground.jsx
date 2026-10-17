@@ -66,6 +66,10 @@ export function BasketballCourtBackground() {
   // Realistic counter-clockwise backspin in side view
   const ballRotation = -scrollProgress * 1080;
 
+  // Vertical downward offset for the entire basketball setup (court, hoop stanchion, trajectory, and ball)
+  // Shifted up to 90px to keep the setup well-proportioned while ensuring the ball stays within the frame
+  const SETUP_OFFSET_Y = 90;
+
   return (
     <div
       className="basketball-bg-container"
@@ -123,20 +127,21 @@ export function BasketballCourtBackground() {
           </linearGradient>
         </defs>
 
-        {/* ========================================================================= */}
-        {/* LAYER 1: FLOOR-LEVEL COURTSIDE HALF-COURT (HOOP TOWERING HIGH ABOVE)      */}
-        {/* ========================================================================= */}
-        <g id="court-geometry">
-          {/* Base Floor Fill */}
-          <rect width="1920" height="1080" fill="url(#courtGlow)" />
+        {/* Base Full Viewport Floor Fill */}
+        <rect x="-100" y="-100" width="2120" height="1280" fill="url(#courtGlow)" />
 
-          {/* Out-of-bounds Apron Perimeter at Floor Level */}
-          <polygon
-            points="230,570 1740,570 1900,1050 0,1050"
-            fill="#0D0F13"
-            stroke="rgba(158, 220, 255, 0.12)"
-            strokeWidth="1.5"
-          />
+        {/* ========================================================================= */}
+        {/* SHIFTED BASKETBALL SETUP: COURT, HOOP ASSEMBLY, BALL & RIM                */}
+        {/* ========================================================================= */}
+        <g id="basketball-setup" transform={`translate(0, ${SETUP_OFFSET_Y})`}>
+          <g id="court-geometry">
+            {/* Out-of-bounds Apron Perimeter at Floor Level */}
+            <polygon
+              points="230,570 1740,570 1900,1050 0,1050"
+              fill="#0D0F13"
+              stroke="rgba(158, 220, 255, 0.12)"
+              strokeWidth="1.5"
+            />
 
           {/* Hardwood Half-Court Playing Surface (Floor Level View) */}
           <polygon
@@ -484,7 +489,7 @@ export function BasketballCourtBackground() {
         {/* ========================================================================= */}
         <g
           id="animated-basketball"
-          transform={`translate(${ballX}, ${ballY}) scale(${ballScale})`}
+          transform={`translate(${ballX}, ${ballY}) scale(${ballScale * 1.15})`}
         >
           {/* Rotating Basketball Body & Leather Seams */}
           <g transform={`rotate(${ballRotation})`}>
@@ -528,6 +533,7 @@ export function BasketballCourtBackground() {
             strokeWidth="6.5"
           />
         )}
+        </g>
       </svg>
     </div>
   );

@@ -23,7 +23,7 @@ export const siteConfig = {
     headlinePart1: "I",
     headlinePart2: "PROTOTYPE",
     headlinePart3: "",
-    supportingText: "I'm Aaryan Gaikwad a 19 year old engineering student exploring the intersection of robotics, mechanical design, manufacturing, and code.",
+    supportingText: "I'm Aaryan Gaikwad, a 19 year old engineering student exploring the worlds of robotics, product design, automation, and intelligent systems.",
     primaryCtaText: "EXPLORE MY WORK ↘",
     primaryCtaTarget: "#work",
     secondaryCtaText: "ABOUT & PHILOSOPHY →",
