@@ -59,7 +59,6 @@
 .hero-visible-photo:hover {
   transform: scale(1.03);
   border-color: #FFFFFF;
-  box-shadow: 0 0 54px rgba(158, 220, 255, 0.7), 0 24px 52px rgba(0, 0, 0, 0.95);
 }
 
 .hero-eyebrow {
@@ -240,8 +239,8 @@
   }
 
   .hero-canvas-column {
-    min-height: 380px;
-    height: 48vh;
+    min-height: 320px;
+    height: 40vh;
   }
 
   .hero-actions {
@@ -256,5 +255,46 @@
 
   .hero-interaction-hint {
     display: none;
+  }
+
+  .hero-visible-photo {
+    width: clamp(200px, 28vw, 260px);
+    height: clamp(200px, 28vw, 260px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-layout {
+    gap: 0.75rem;
+  }
+
+  .hero-content {
+    padding-block: 1rem;
+  }
+
+  .hero-supporting {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.68rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-eyebrow-container {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-photo-frame {
+    margin-bottom: 1rem;
   }
 }

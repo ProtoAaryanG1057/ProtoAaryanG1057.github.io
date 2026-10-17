@@ -43,9 +43,8 @@ export const siteConfig = {
     headline: "Thinking through purpose, learning through testing.",
     subheading: "",
     paragraphs: [
-      "I’m an engineering student curious about how things work, from mechanical systems and CAD to robotics, actuation, and control software. I enjoy exploring ideas, understanding the principles behind them, and turning concepts into working prototypes.",
-      "My work mainly revolves around CAD modeling and mechanical design, with a growing interest in simulation, manufacturing, embedded systems, and motion control. I’m always looking to learn across disciplines and connect theory with practical applications.",
-      "I believe good engineering comes from curiosity, thoughtful design, and a willingness to experiment, question, and improve."
+      "I enjoy thinking deeply, visualising ideas, and finding ways to make sense of complex things. Whether it’s designing a mechanical solution, exploring how a system works, or explaining a concept to someone else, there’s something satisfying about turning confusion into clarity.",
+      "Curiosity often leads me from asking questions to sketching ideas, building prototypes, and experimenting with different approaches. Teaching is a natural extension of that process; sharing knowledge, exchanging perspectives, and helping others understand something new are just as rewarding as learning it myself."
     ],
     disciplines: [
       {
